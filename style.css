@@ -48,6 +48,8 @@ body {
     overflow-x: hidden;
 }
 
+body.dark { background: #222; color: #fff; }
+
 img,
 picture,
 video,
