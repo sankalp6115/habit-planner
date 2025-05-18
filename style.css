@@ -1,6 +1,8 @@
 /* CSS Reset */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -35,351 +37,445 @@
 }
 
 body {
-    line-height: 1.5;
-    background-image: linear-gradient(30deg,white 10%, skyblue);
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    overflow-x: hidden;
+  line-height: 1.5;
+  background-image: linear-gradient(30deg, white 10%, skyblue);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
+
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
-label{
-    cursor: pointer;
+label {
+  cursor: pointer;
 }
 
 /* Decoration */
 .confetti {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(https://i.ibb.co/s9GsSTwK/Animation.gif);
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://i.ibb.co/s9GsSTwK/Animation.gif);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
 }
 
 .active-confetti {
-    opacity: 1;
-    visibility: visible;
-    animation: confetti 5s 1 linear forwards;
+  opacity: 1;
+  visibility: visible;
+  animation: confetti 5s 1 linear forwards;
 }
 
 @keyframes confetti {
-    0% { opacity: 0; visibility: hidden; }
-    10% { opacity: 0; visibility: visible; }
-    20% { opacity: 1; }
-    70% { opacity: 1; }
-    80% { opacity: 0; }
-    100% { opacity: 0; visibility: hidden; }
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  10% {
+    opacity: 0;
+    visibility: visible;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-:root{
-    --accent: #C8DBF2;
+:root {
+  --accent: #c8dbf2;
 }
 
 /* Header */
-header{
-    display: flex;
-    align-items: center;
-    margin: 0px 50px;
+header {
+  display: flex;
+  align-items: center;
+  margin: 0px 50px;
 }
-.heading{
-    font-family: "Segoe UI Variable Small Light";
-    font-size: 3em;
-    padding: 10px;
-    font-weight: 600;
-    flex-grow: 4;
+
+.heading {
+  font-family: "Segoe UI Variable Small Light";
+  font-size: 3em;
+  padding: 10px;
+  font-weight: 600;
+  flex-grow: 4;
 }
+
 /* Right Side Date */
-.date{
-    font-size: 1.8em;
-    flex-grow: 0.8;
+.date {
+  font-size: 1.8em;
+  flex-grow: 0.8;
 }
 
 /* Remaining Time */
-section.rem_time{
-    margin: 0 70px;
-    font-size: 1.1em;
-    color: #000000;
-    font-weight: 100;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+section.rem_time {
+  margin: 0 70px;
+  font-size: 1.1em;
+  color: #000000;
+  font-weight: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.main_and_sticker{
-    display: flex;
+.main_and_sticker {
+  display: flex;
 }
+
 /* Main Body */
-main{
-    flex-grow: 4;
+main {
+  flex-grow: 4;
 }
 
 /* Duration Bar And Progress Bar */
-.duration_and_addition{
-    display: flex;
-}
-.duration{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #EDF3FC;
-    margin: 10px 50px;
-    border-radius: 100px;
-    font-weight: 100;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 10px 10px;
-}
-.duration_btn{
-    padding: 0px 30px;
+.duration_and_addition {
+  display: flex;
 }
 
-div.add_habit_btn{
-    color: rgb(0, 132, 255);
-    border: 2px solid blue;
-    transform: translateY(10px);
-    border-radius: 100px;
-    height: max-content;
-    padding: 8px;
-    cursor: pointer;
+.duration {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #edf3fc;
+  margin: 10px 50px;
+  border-radius: 100px;
+  font-weight: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px 10px;
+}
 
+.duration_btn {
+  padding: 0px 30px;
+}
+
+div.add_habit_btn {
+  color: rgb(0, 132, 255);
+  border: 2px solid blue;
+  transform: translateY(10px);
+  border-radius: 100px;
+  height: max-content;
+  padding: 8px;
+  cursor: pointer;
 }
 
 /* Date Range and progress */
-.range_and_progress{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+.range_and_progress {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 /* Right Side Nav Button */
-.navigation{
-    margin-left: 40px;
-    flex-grow: 0.1;
-}
-.nav_button{
-    height: 40px;
-    width: 40px;
-    margin: 0 10px 0 0;
-    border: 1px solid var(--accent);
-    border-radius: 10px;
-    background-color: transparent;
-    background-position: center;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    box-shadow: 2px 2px 0 orange, 4px 4px 0 orange, 6px 6px 0 orange;
-    transition: 0.1s;
-}
-.nav_button:active{
-    box-shadow: 2px 2px 0 orange;
-    transform: translateX(3px) translateY(3px);
-}
-.previous{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/130/130882.png);
-}
-.next{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/130/130884.png);
+.navigation {
+  margin-left: 40px;
+  flex-grow: 0.1;
 }
 
-.range{
-    display: flex;
-    align-items: center;
-}
-.view{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.view_options{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #c9ffea;
-    border-radius: 100px;
-    font-weight: 100;
-    gap: 20px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 5px 5px;
-}
-.view_options img{
-    height: 20px;
-}
-.view_options label{
-    padding: 10px;
-    border-radius: 100px;
-    
+.nav_button {
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 0 0;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  background-color: transparent;
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 0 orange, 4px 4px 0 orange, 6px 6px 0 orange;
+  transition: 0.1s;
 }
 
-input[type=radio]{
-    display: none;
-    transition: 0.2s;
-}
-input[type=radio]:checked + label{
-    background-color: white;
+.nav_button:active {
+  box-shadow: 2px 2px 0 orange;
+  transform: translateX(3px) translateY(3px);
 }
 
+.previous {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/130/130882.png);
+}
+
+.next {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/130/130884.png);
+}
+
+.range {
+  display: flex;
+  align-items: center;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.view_options {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #c9ffea;
+  border-radius: 100px;
+  font-weight: 100;
+  gap: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 5px 5px;
+}
+
+.view_options img {
+  height: 20px;
+}
+
+.view_options label {
+  padding: 10px;
+  border-radius: 100px;
+}
+
+input[type="radio"] {
+  display: none;
+  transition: 0.2s;
+}
+
+input[type="radio"]:checked + label {
+  background-color: white;
+}
 
 /* Progressbar */
-.progress{
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-}
-.progress_bar{
-    height: 10px;
-    width: 40%;
-    background-color: white;
-    border-radius: 20px;
-}
-.progress_visualiser{
-    height: 10px;
-    background-image: linear-gradient(to right, violet, pink);
-    border-radius: 100px;
-    z-index: 10;
-}
-.progress_stat{
-    font-size: 0.8em;
+.progress {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
 }
 
+.progress_bar {
+  height: 10px;
+  width: 40%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.progress_visualiser {
+  height: 10px;
+  background-image: linear-gradient(to right, violet, pink);
+  border-radius: 100px;
+  z-index: 10;
+}
+
+.progress_stat {
+  font-size: 0.8em;
+}
 
 /* Main Table */
-:root{
-    --exercise: #ae82ff;
-    --dsa: #ff4760;
-    --cat: #ff8f6d;
-    --meditate: #ffc85a;
-    --brainstorming: #518eff;
-}
-section.habit_table{
-    margin: 20px 50px;
-}
-section.habit_table tr.days{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-section.habit_table td{
-    width: 60px;
-    text-align: center;
-    padding: 15px 10px;
-}
-section.habit_table tr>td:first-child{
-    width: 180px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: left;
-}
-input[type=checkbox]{
-    display: none;
+:root {
+  --exercise: #ae82ff;
+  --dsa: #ff4760;
+  --cat: #ff8f6d;
+  --meditate: #ffc85a;
+  --brainstorming: #518eff;
 }
 
-section.habit_table label{
-    padding: 5px 8px; 
-    border-radius: 6px;
-    color: transparent;
-    background-color: #C8DBF2;
-    transition: 0.5s;
+section.habit_table {
+  margin: 20px 50px;
 }
-input:checked + label.exercise{background-color: var(--exercise);}
-input:checked + label.dsa{background-color: var(--dsa);}
-input:checked + label.cat{background-color: var(--cat);}
-input:checked + label.meditation{background-color: var(--meditate);}
-input:checked + label.brainstorming{background-color: var(--brainstorming);}
+
+section.habit_table tr.days {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+section.habit_table td {
+  width: 60px;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+section.habit_table tr > td:first-child {
+  width: 180px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+section.habit_table label {
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: transparent;
+  background-color: #c8dbf2;
+  transition: 0.5s;
+}
+
+input:checked + label.exercise {
+  background-color: var(--exercise);
+}
+
+input:checked + label.dsa {
+  background-color: var(--dsa);
+}
+
+input:checked + label.cat {
+  background-color: var(--cat);
+}
+
+input:checked + label.meditation {
+  background-color: var(--meditate);
+}
+
+input:checked + label.brainstorming {
+  background-color: var(--brainstorming);
+}
 
 /* Add habit form */
-form h2{
-    text-align: center;
+form h2 {
+  text-align: center;
 }
-form{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    /* background-color: pink; */
-    background-color: rgb(0, 132, 255, 0.2);
-    backdrop-filter: blur(5px);
-    padding: 20px;
-    border-radius: 10px;
-    
+
+form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* background-color: pink; */
+  background-color: rgb(0, 132, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 10px;
 }
-form button.close{
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    border: 0;
-    margin: 5px 15px 0 0;
-    cursor: pointer;
+
+form button.close {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: 0;
+  margin: 5px 15px 0 0;
+  cursor: pointer;
 }
+
 form label {
-    position: absolute;
-    transition: 0.2s;
-    translate: 10px 49px;
-    font-size: 0.8em;
-}
-form input,select{
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: lightgreen;
-    border: 0;
-    border-radius: 20px;
-    border: 1px solid black;
-}
-input#activity:focus + label.activity , input#activity:not(:placeholder-shown) + label.activity{
-    transform: translateX(10px) translateY(-23px);
-    background-color: lightblue;
-    border-radius: 5px;
-    padding: 0px 10px;
+  position: absolute;
+  transition: 0.2s;
+  translate: 10px 49px;
+  font-size: 0.8em;
 }
 
-button.add_habit{
-    color: rgb(0, 132, 255);
-    border: 1px solid #CADEF3;
-    border-radius: 100px;
-    padding: 10px;
+form input,
+select {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: lightgreen;
+  border: 0;
+  border-radius: 20px;
+  border: 1px solid black;
 }
 
-p#output{
-    background-color: red;
-
+input#activity:focus + label.activity,
+input#activity:not(:placeholder-shown) + label.activity {
+  transform: translateX(10px) translateY(-23px);
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: 0px 10px;
 }
 
+button.add_habit {
+  color: rgb(0, 132, 255);
+  border: 1px solid #cadef3;
+  border-radius: 100px;
+  padding: 10px;
+}
 
+p#output {
+  background-color: red;
+}
 
 /* Sticker */
-.stickers{
-    width: 40%;
-    /* background-color: red; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.stickers {
+  width: 40%;
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.stickers img{
-    filter: drop-shadow(5px 5px gold);
+
+.stickers img {
+  filter: drop-shadow(5px 5px gold);
+}
+
+.stickers img:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.stickers img:nth-child(4) {
+  grid-column: span 3;
+  grid-row: span 1;
 }
