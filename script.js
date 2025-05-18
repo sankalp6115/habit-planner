@@ -115,15 +115,16 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
             return;
         }
 
-        const colorMap = {
-            blue: "brainstorming",
-            red: "dsa",
-            yellow: "meditate",
-            greenyellow: "cat",
-            white: "exercise"
+            const colorMap = {
+                blue: { class: "brainstorming", emoji: "🔵" },
+                red: { class: "dsa", emoji: "🔴" },
+                yellow: { class: "meditate", emoji: "🟡" },
+                greenyellow: { class: "cat", emoji: "🟢" },
+                white: { class: "exercise", emoji: "🟣" }
         };
-        const colorClass = colorMap[color] || "exercise";
-        const displayHabit = color === "red" ? `🔴 ${habit}` : habit;
+            const colorConfig = colorMap[color] || { class: "exercise", emoji: "" };
+            const displayHabit = colorConfig.emoji ? `${colorConfig.emoji} ${habit}` : habit;
+            const colorClass = colorMap[color] || "exercise";
 
         let table = document.getElementById("habit_table");
         let new_row = document.createElement("tr");
