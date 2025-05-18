@@ -1,7 +1,8 @@
-Habit Tracker
-Habit Tracker is a web-based application designed to help users build and maintain daily habits with an intuitive, visually engaging interface. Built using HTML, CSS, and JavaScript, it offers a clean way to track tasks across a week, celebrate progress with sound effects and animations, and persist data for seamless use. Perfect for anyone looking to stay organized and motivated, this app combines functionality with a touch of flair.
+Habit Hero
+
+Habit Hero is a web-based application designed to help users build and maintain daily habits with an intuitive, visually engaging interface. Built using HTML, CSS, and JavaScript, it offers a clean way to track tasks across a week, celebrate progress with sound effects and animations, and persist data for seamless use. Perfect for anyone looking to stay organized and motivated, this app combines functionality with a touch of flair.
 Overview
-This project provides a dynamic platform for tracking habits, featuring a weekly grid, real-time progress updates, and rewarding feedback for task completion. Whether you're aiming to exercise daily or master a new skill, Habit Tracker keeps you on course with a blend of practical features and subtle celebratory elements.
+This project provides a dynamic platform for tracking habits, featuring a weekly grid, real-time progress updates, and rewarding feedback for task completion. Whether you're aiming to exercise daily or master a new skill, Habit Hero keeps you on course with a blend of practical features and subtle celebratory elements.
 Features
 1. Dynamic Habit Creation
 
