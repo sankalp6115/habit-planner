@@ -1,5 +1,9 @@
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+    // Initialize Audio
+    const clickSound = new Audio("Sounds/click.wav");
+    const winSound = new Audio("Sounds/win.wav");
+
     // Morning, Afternoon, Evening Handler
     let d = new Date();
     let hour = d.getHours();
@@ -119,8 +123,6 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
             white: "exercise"
         };
         const colorClass = colorMap[color] || "exercise";
-
-        // Add red emoji for red-colored habits
         const displayHabit = color === "red" ? `🔴 ${habit}` : habit;
 
         let table = document.getElementById("habit_table");
@@ -134,7 +136,7 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
             let td = document.createElement("td");
             let input = document.createElement("input");
             input.type = "checkbox";
-            input.id = `habit_${habit}_${i}`; // Use original habit name for ID to avoid emoji in key
+            input.id = `habit_${habit}_${i}`;
             let label = document.createElement("label");
             label.setAttribute("for", `habit_${habit}_${i}`);
             label.className = colorClass;
@@ -155,6 +157,7 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
 
     // Progress Bar and LocalStorage
     let lastCheckedDay = new Date().getDay();
+    let hasPlayedWinSound = false; // Track if win sound has played for the current day
 
     function updateProgressBar() {
         const table = document.getElementById("habit_table");
@@ -178,12 +181,16 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
         progressVisualiser.style.width = `${progressPercentage}%`;
         progressStat.textContent = `${progressPercentage}% Achieved, Go on !`;
 
-        if (progressPercentage === 100) {
+        if (progressPercentage === 100 && !hasPlayedWinSound) {
             console.log("Very impressive");
+            winSound.play().catch(err => console.error("Win sound playback failed:", err));
             confetti.classList.add("active-confetti");
+            hasPlayedWinSound = true; // Prevent replay until day changes
             setTimeout(() => {
                 confetti.classList.remove("active-confetti");
             }, 10000);
+        } else if (progressPercentage < 100) {
+            hasPlayedWinSound = false; // Reset when progress drops below 100%
         }
     }
 
@@ -201,6 +208,9 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
             const key = `habit_${habitName}_${dayIndex}`;
             localStorage.setItem(key, checkbox.checked);
             console.log(`Saved ${key}: ${checkbox.checked}`);
+            if (checkbox.checked) {
+                clickSound.play().catch(err => console.error("Click sound playback failed:", err));
+            }
             updateProgressBar();
         }
     }
@@ -223,6 +233,7 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
         const currentDay = new Date().getDay();
         if (currentDay !== lastCheckedDay) {
             lastCheckedDay = currentDay;
+            hasPlayedWinSound = false; // Reset win sound for new day
             updateProgressBar();
             updateWeekRange();
         }

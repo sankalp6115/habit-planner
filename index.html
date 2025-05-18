@@ -10,15 +10,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Decoration Circle -->
-    <!-- <div class="circle1"></div>
-    <div class="circle2"></div> -->
-
+    <button style="display: none;" onclick="clickSound.play().then(() => clickSound.pause())">Enable Audio</button>
     <!-- Decoration -->
-     <div class="confetti">
-        
-     </div>
+     <div class="confetti"></div>
 
+    <!-- Audio -->
+    <audio src="Sounds/click.wav" id="click"></audio>
+    <audio src="Sounds/win.wav" id="win"></audio>
      <!-- Header -->
     <header>
         <div class="heading"></div>
