@@ -38,7 +38,9 @@
 
 body {
   line-height: 1.5;
-  background-image: linear-gradient(30deg, white 10%, skyblue);
+  /* background-image: linear-gradient(45deg, white 10%, skyblue); */
+  background-image: url(https://wallpapercat.com/w/full/4/8/c/795263-1920x1080-desktop-1080p-gradient-background-photo.jpg);
+  background-attachment: fixed;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -146,7 +148,7 @@ label {
 }
 
 :root {
-  --accent: #c8dbf2;
+  --accent: #9063ff;
 }
 
 /* Header */
@@ -240,7 +242,7 @@ div.add_habit_btn {
   margin: 0 10px 0 0;
   border: 1px solid var(--accent);
   border-radius: 10px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.8);
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
@@ -367,6 +369,7 @@ section.habit_table label {
   border-radius: 6px;
   color: transparent;
   background-color: #c8dbf2;
+  box-shadow: 2px 2px 2px black, 0 0 2px inset black;
   transition: 0.5s;
 }
 
