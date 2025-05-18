@@ -499,3 +499,18 @@ p#output {
     grid-column: span 3;
     grid-row: span 1;
 }
+
+
+button#dark-mode-toggle{
+    border-radius: 10px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 0 orange, 4px 4px 0 orange, 6px 6px 0 orange;
+    transition: 0.1s;
+}
+
+button#dark-mode-toggle:active{
+    box-shadow: 2px 2px 0 orange;
+    transform: translateX(3px) translateY(3px);
+}
