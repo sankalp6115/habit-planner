@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Fascinate+Inline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Decoration Circle -->
+    <!-- <div class="circle1"></div>
+    <div class="circle2"></div> -->
+
+    <!-- Decoration -->
+     <div class="confetti">
+        
+     </div>
+
+     <!-- Header -->
+    <header>
+        <div class="heading"></div>
+
+        <div class="date"></div>
+        <div class="navigation">
+            <button class="nav_button previous"></button>
+            <button class="nav_button next"></button>
+        </div>
+    </header>
+    
+    <section class="rem_time"></section>
+    <span class="sec"></span>
+    
+    <main>
+        <div class="duration_and_addition">
+            <div class="duration">
+                <div class="duration_btn">Week</div>
+                <div class="duration_btn">Month</div>
+                <div class="duration_btn">Year</div>
+                <div class="duration_btn">All Time</div>
+            </div>
+            <div class="add_habit_btn">+ Add Habit</div>
+        </div>
+        <div class="range_and_progress">
+            
+            <div class="range">
+                <button class="nav_button previous"></button>
+                <button class="nav_button next"></button>
+                <span class="range">14 Jan, 2025 - 20 Jan , 2025</span>
+            </div>
+            <div class="view">
+                <span>Current</span>
+                <div class="view_options">
+                    <input type="radio" name="view_options" id="list" checked>
+                    <label for="list"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/svg-rounded_list-512.png"></label>
+                    <input type="radio" name="view_options" id="box">
+                    <label for="box"><img src="https://cdn2.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_box-512.png"></label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress">
+            <div class="progress_bar">
+                <div class="progress_visualiser"></div>
+            </div>
+            <div class="progress_stat">🔼Up 50% in comparison to Last Week</div>
+        </div>
+    
+        <section class="habit_table">
+            <table id="habit_table">
+                <tr class="days">
+                    <td></td>
+                    <td>Mon</td>
+                    <td>Tue</td>
+                    <td>Wed</td>
+                    <td>Thu</td>
+                    <td>Fri</td>
+                    <td>Sat</td>
+                    <td>Sun</td>
+                </tr>
+                <!-- 🔴🟠🟡🟢🔵🟣 -->
+                <tr class="habits">
+                    <td>🟣 💪 Exercise</td>
+                    <td><input type="checkbox" class="exercise" name="done" id="exercise-Mon"><label for="exercise-Mon" class="exercise">✓</label></td>
+                    <td><input type="checkbox" class="exercise" name="done" id="exercise-Tue"><label for="exercise-Tue" class="exercise">✓</label></td>
+                    <td><input type="checkbox" class="exercise" name="done" id="exercise-Wed"><label for="exercise-Wed" class="exercise">✓</label></td>
+                    <td><input type="checkbox" class="exercise" name="done" id="exercise-Thu"><label for="exercise-Thu" class="exercise">✓</label></td>
+                    <td><input type="checkbox" class="exercise" name="done" id="exercise-Fri"><label for="exercise-Fri" class="exercise">✓</label></td>
+                    <td><input type="checkbox" class="exercise" name="done" id="exercise-Sat"><label for="exercise-Sat" class="exercise">✓</label></td>
+                    <td><input type="checkbox" class="exercise" name="done" id="exercise-Sun"><label for="exercise-Sun" class="exercise">✓</label></td>
+                </tr>
+                <tr class="habits">
+                    <td>🔴 🧑‍💻 DSA</td>
+                    <td><input type="checkbox" class="dsa" name="done" id="dsa-Mon"><label for="dsa-Mon" class="dsa">✓</label></td>
+                    <td><input type="checkbox" class="dsa" name="done" id="dsa-Tue"><label for="dsa-Tue" class="dsa">✓</label></td>
+                    <td><input type="checkbox" class="dsa" name="done" id="dsa-Wed"><label for="dsa-Wed" class="dsa">✓</label></td>
+                    <td><input type="checkbox" class="dsa" name="done" id="dsa-Thu"><label for="dsa-Thu" class="dsa">✓</label></td>
+                    <td><input type="checkbox" class="dsa" name="done" id="dsa-Fri"><label for="dsa-Fri" class="dsa">✓</label></td>
+                    <td><input type="checkbox" class="dsa" name="done" id="dsa-Sat"><label for="dsa-Sat" class="dsa">✓</label></td>
+                    <td><input type="checkbox" class="dsa" name="done" id="dsa-Sun"><label for="dsa-Sun" class="dsa">✓</label></td>
+                </tr>
+                <tr class="habits">
+                    <td>🟠 🏫 CAT Questions</td>
+                    <td><input type="checkbox" class="cat" name="done" id="cat-Mon"><label for="cat-Mon" class="cat">✓</label></td>
+                    <td><input type="checkbox" class="cat" name="done" id="cat-Tue"><label for="cat-Tue" class="cat">✓</label></td>
+                    <td><input type="checkbox" class="cat" name="done" id="cat-Wed"><label for="cat-Wed" class="cat">✓</label></td>
+                    <td><input type="checkbox" class="cat" name="done" id="cat-Thu"><label for="cat-Thu" class="cat">✓</label></td>
+                    <td><input type="checkbox" class="cat" name="done" id="cat-Fri"><label for="cat-Fri" class="cat">✓</label></td>
+                    <td><input type="checkbox" class="cat" name="done" id="cat-Sat"><label for="cat-Sat" class="cat">✓</label></td>
+                    <td><input type="checkbox" class="cat" name="done" id="cat-Sun"><label for="cat-Sun" class="cat">✓</label></td>
+                </tr>
+                <tr class="habits">
+                    <td>🟡 🧘 Meditate</td>
+                    <td><input type="checkbox" class="meditation" name="done" id="meditation-Mon"><label for="meditation-Mon" class="meditation">✓</label></td>
+                    <td><input type="checkbox" class="meditation" name="done" id="meditation-Tue"><label for="meditation-Tue" class="meditation">✓</label></td>
+                    <td><input type="checkbox" class="meditation" name="done" id="meditation-Wed"><label for="meditation-Wed" class="meditation">✓</label></td>
+                    <td><input type="checkbox" class="meditation" name="done" id="meditation-Thu"><label for="meditation-Thu" class="meditation">✓</label></td>
+                    <td><input type="checkbox" class="meditation" name="done" id="meditation-Fri"><label for="meditation-Fri" class="meditation">✓</label></td>
+                    <td><input type="checkbox" class="meditation" name="done" id="meditation-Sat"><label for="meditation-Sat" class="meditation">✓</label></td>
+                    <td><input type="checkbox" class="meditation" name="done" id="meditation-Sun"><label for="meditation-Sun" class="meditation">✓</label></td>
+                </tr>
+                <tr class="habits">
+                    <td>🔵 🧠 Brainstorming</td>
+                    <td></label><input type="checkbox" class="brainstorming" name="done" id="brainstorming-Mon"><label for="brainstorming-Mon" class="brainstorming">✓</label></td>
+                    <td></label><input type="checkbox" class="brainstorming" name="done" id="brainstorming-Tue"><label for="brainstorming-Tue" class="brainstorming">✓</label></td>
+                    <td></label><input type="checkbox" class="brainstorming" name="done" id="brainstorming-Wed"><label for="brainstorming-Wed" class="brainstorming">✓</label></td>
+                    <td></label><input type="checkbox" class="brainstorming" name="done" id="brainstorming-Thu"><label for="brainstorming-Thu" class="brainstorming">✓</label></td>
+                    <td></label><input type="checkbox" class="brainstorming" name="done" id="brainstorming-Fri"><label for="brainstorming-Fri" class="brainstorming">✓</label></td>
+                    <td></label><input type="checkbox" class="brainstorming" name="done" id="brainstorming-Sat"><label for="brainstorming-Sat" class="brainstorming">✓</label></td>
+                    <td></label><input type="checkbox" class="brainstorming" name="done" id="brainstorming-Sun"><label for="brainstorming-Sun" class="brainstorming">✓</label></td>
+                </tr>
+                
+            </table>
+        </section>
+    </main>
+
+
+    <!-- Add HAbit Form -->
+    <form action="" id="habit_addn_form">
+        <h2>+ Add Habit</h2>
+        <button class="close" role="button" type="button">❌</button>
+        <input type="text" name="activity" id="activity" placeholder=" ">
+        <label for="activity" class="activity">Habit</label>
+        
+        <select name="color" id="color">
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="greenyellow">Greenyellow</option>
+            <option value="white">White</option>
+        </select>
+        <button type="submit" class="add_habit">+ Add Habit</button>
+        
+    </form>
+<p id="output"></p>
+
+</body>
+<script src="script.js"></script>
+<script>
+</script>
+
+</html>

@@ -1,0 +1,362 @@
+/* CSS Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+    line-height: 1.5;
+    background-image: linear-gradient(30deg,white 10%, skyblue);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+label{
+    cursor: pointer;
+}
+
+/* Decoration Circles */
+/* .circle1{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    filter: blur(50px);
+    z-index: -10;
+}
+.circle2{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    position: fixed;
+    bottom: 50%;
+    right: 10%;
+    filter: blur(50px);
+    z-index: -10;
+} */
+/* Decoration */
+.confetti {
+    height: 100vh;
+    width: 50vw;
+    background-image: url(https://i.pinimg.com/originals/fd/b0/9c/fdb09cd5e747f5c8330f998f11efb0a1.gif);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.active-confetti {
+    opacity: 1;
+    visibility: visible;
+    animation: confetti 5s 1 linear forwards;
+}
+
+@keyframes confetti {
+    0% { opacity: 0; visibility: hidden; }
+    10% { opacity: 0; visibility: visible; }
+    20% { opacity: 1; }
+    70% { opacity: 1; }
+    80% { opacity: 0; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+:root{
+    --accent: #C8DBF2;
+}
+
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    margin: 0px 50px;
+}
+.heading{
+    font-family: "Segoe UI Variable Small Light";
+    font-size: 3em;
+    padding: 10px;
+    font-weight: 600;
+    flex-grow: 4;
+}
+/* Right Side Date */
+.date{
+    font-size: 1.8em;
+    flex-grow: 0.8;
+}
+/* Right Side Nav Button */
+.navigation{
+    flex-grow: 0.1;
+}
+.nav_button{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--accent);
+    background-color: transparent;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.previous{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/130/130882.png);
+}
+.next{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/130/130884.png);
+}
+
+/* Remaining Time */
+section.rem_time{
+    margin: 0 70px;
+    font-size: 1.1em;
+    color: #9AA5B3;
+    font-weight: 100;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Main Body */
+main{}
+
+/* Duration Bar And Progress Bar */
+.duration_and_addition{
+    display: flex;
+}
+.duration{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #EDF3FC;
+    margin: 10px 50px;
+    border-radius: 100px;
+    font-weight: 100;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 10px;
+}
+.duration_btn{
+    padding: 0px 30px;
+}
+
+div.add_habit_btn{
+    color: rgb(0, 132, 255);
+    border: 2px solid blue;
+    transform: translateY(10px);
+    border-radius: 100px;
+    height: max-content;
+    padding: 8px;
+    cursor: pointer;
+
+}
+
+/* Date Range and progress */
+.range_and_progress{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.range .nav_button{
+    margin-left: 10px;
+}
+.range{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.view{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.view_options{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #c9ffea;
+    border-radius: 100px;
+    font-weight: 100;
+    gap: 20px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px 5px;
+}
+.view_options img{
+    height: 20px;
+}
+.view_options label{
+    padding: 10px;
+    border-radius: 100px;
+    
+}
+
+input[type=radio]{
+    display: none;
+    transition: 0.2s;
+}
+input[type=radio]:checked + label{
+    background-color: white;
+}
+
+
+/* Progressbar */
+.progress{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.progress_bar{
+    height: 10px;
+    width: 40%;
+    background-color: white;
+    border-radius: 20px;
+}
+.progress_visualiser{
+    height: 10px;
+    background-image: linear-gradient(to right, violet, pink);
+    border-radius: 100px;
+    z-index: 10;
+}
+.progress_stat{
+    font-size: 0.8em;
+}
+
+
+/* Main Table */
+:root{
+    --exercise: #ae82ff;
+    --dsa: #ff4760;
+    --cat: #ff8f6d;
+    --meditate: #ffc85a;
+    --brainstorming: #518eff;
+}
+section.habit_table{
+    margin: 20px 50px;
+}
+section.habit_table tr.days{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+section.habit_table td{
+    width: 60px;
+    text-align: center;
+    padding: 10px 0;
+}
+section.habit_table tr>td:first-child{
+    width: 180px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+}
+input[type=checkbox]{
+    display: none;
+}
+
+section.habit_table label{
+    padding: 5px 8px; 
+    border-radius: 6px;
+    color: transparent;
+    background-color: #C8DBF2;
+    transition: 0.5s;
+}
+input:checked + label.exercise{background-color: var(--exercise);}
+input:checked + label.dsa{background-color: var(--dsa);}
+input:checked + label.cat{background-color: var(--cat);}
+input:checked + label.meditation{background-color: var(--meditate);}
+input:checked + label.brainstorming{background-color: var(--brainstorming);}
+
+/* Add habit form */
+form h2{
+    text-align: center;
+}
+form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    /* background-color: pink; */
+    background-color: rgb(0, 132, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+form button.close{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: 0;
+    margin: 5px 15px 0 0;
+    cursor: pointer;
+}
+form label {
+    position: absolute;
+    transition: 0.2s;
+    translate: 10px 49px;
+    font-size: 0.8em;
+}
+form input,select{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+    border: 0;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+input#activity:focus + label.activity , input#activity:not(:placeholder-shown) + label.activity{
+    transform: translateX(10px) translateY(-23px);
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+button.add_habit{
+    color: rgb(0, 132, 255);
+    border: 1px solid #CADEF3;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+p#output{
+    background-color: red;
+
+}
